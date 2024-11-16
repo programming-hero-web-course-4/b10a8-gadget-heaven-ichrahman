@@ -1,0 +1,152 @@
+[
+    {
+        "product_id": 1,
+        "product_title": "Smart Watch Pro",
+        "product_image": "smartwatch.jpg",
+        "category": "Wearables",
+        "price": 120,
+        "description": "Feature-rich smart watch with health tracking and notifications.",
+        "specification": [
+            "Heart Rate Monitor",
+            "GPS",
+            "Waterproof"
+        ],
+        "availability": true,
+        "rating": 4.5
+    },
+    {
+        "product_id": 2,
+        "product_title": "Fitness Tracker X",
+        "product_image": "fitnesstracker.jpg",
+        "category": "Wearables",
+        "price": 80,
+        "description": "Track your daily activity and sleep with this lightweight tracker.",
+        "specification": [
+            "Step Counter",
+            "Sleep Monitor",
+            "Long Battery Life"
+        ],
+        "availability": true,
+        "rating": 4.2
+    },
+    {
+        "product_id": 3,
+        "product_title": "VR Headset Pro",
+        "product_image": "vrheadset.jpg",
+        "category": "Wearables",
+        "price": 250,
+        "description": "Immersive VR headset for gaming and virtual experiences.",
+        "specification": [
+            "4K Display",
+            "Comfort Fit",
+            "Wide Compatibility"
+        ],
+        "availability": true,
+        "rating": 4.7
+    },
+    {
+        "product_id": 4,
+        "product_title": "Wireless Earbuds Plus",
+        "product_image": "earbuds.jpg",
+        "category": "Wearables",
+        "price": 70,
+        "description": "Comfortable and high-quality wireless sound.",
+        "specification": [
+            "Noise Cancellation",
+            "Touch Controls",
+            "Water Resistant"
+        ],
+        "availability": true,
+        "rating": 4.3
+    },
+    {
+        "product_id": 5,
+        "product_title": "Smart Glasses 2.0",
+        "product_image": "smartglasses.jpg",
+        "category": "Wearables",
+        "price": 200,
+        "description": "Augmented reality glasses with voice assistant integration.",
+        "specification": [
+            "AR Display",
+            "Bluetooth Connectivity",
+            "Polarized Lenses"
+        ],
+        "availability": true,
+        "rating": 4.4
+    },
+    {
+        "product_id": 6,
+        "product_title": "Smart Ring",
+        "product_image": "smartring.jpg",
+        "category": "Wearables",
+        "price": 95,
+        "description": "Stylish smart ring with fitness tracking and notifications.",
+        "specification": [
+            "Step Counter",
+            "Vibration Alerts",
+            "Compact Design"
+        ],
+        "availability": true,
+        "rating": 4.0
+    },
+    {
+        "product_id": 7,
+        "product_title": "Gaming Laptop Xtreme",
+        "product_image": "gaminglaptop.jpg",
+        "category": "Computers",
+        "price": 1500,
+        "description": "High-performance laptop for gaming and productivity.",
+        "specification": [
+            "16GB RAM",
+            "RTX 3070",
+            "1TB SSD"
+        ],
+        "availability": true,
+        "rating": 4.8
+    },
+    {
+        "product_id": 8,
+        "product_title": "Wireless Keyboard",
+        "product_image": "keyboard.jpg",
+        "category": "Computers",
+        "price": 60,
+        "description": "Sleek and responsive wireless keyboard for home or office.",
+        "specification": [
+            "Ergonomic Design",
+            "Bluetooth",
+            "Rechargeable Battery"
+        ],
+        "availability": true,
+        "rating": 4.5
+    },
+    {
+        "product_id": 9,
+        "product_title": "4K Drone Max",
+        "product_image": "drone.jpg",
+        "category": "Drones",
+        "price": 300,
+        "description": "Capture stunning 4K aerial footage with this easy-to-fly drone.",
+        "specification": [
+            "4K Camera",
+            "30-Minute Flight Time",
+            "Obstacle Detection"
+        ],
+        "availability": false,
+        "rating": 4.6
+    },
+    {
+        "product_id": 10,
+        "product_title": "Mini Camera Drone",
+        "product_image": "minidrone.jpg",
+        "category": "Drones",
+        "price": 120,
+        "description": "Portable mini drone with camera for casual use.",
+        "specification": [
+            "HD Camera",
+            "Compact Design",
+            "One-Key Takeoff"
+        ],
+        "availability": true,
+        "rating": 4.2
+    }
+]
