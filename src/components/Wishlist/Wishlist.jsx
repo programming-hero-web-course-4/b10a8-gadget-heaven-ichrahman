@@ -2,12 +2,23 @@ import { useContext } from "react";
 import { GadgetContext } from "../Root/Root";
 
 const Wishlist = () => {
-    const { wishlist, setWishList } = useContext(GadgetContext);
+    const { wishlist, setWishList, cart, setCart } = useContext(GadgetContext);
     console.log(wishlist)
 
     const handleDelete = itemToRemove => {
         const updatedWishList = wishlist.filter(item => item.product_id !== itemToRemove.product_id);
         setWishList(updatedWishList);
+    }
+
+    const addToCart = item => {
+        const isAlreadyInCart = cart.find(cartItem => cartItem.product_id === item.product_id);
+
+        if (!isAlreadyInCart) {
+            setCart([...cart, item]);
+            alert(`${item.product_title} added to cart!`);
+        } else {
+            alert(`${item.product_title} is already in the cart.`);
+        }
     }
 
     return (
@@ -23,7 +34,7 @@ const Wishlist = () => {
                                     <h3 className="font-bold">{item.product_title}</h3>
                                     <p className="font-light my-3">{item.description}</p>
                                     <p>Price: ${item.price}</p>
-                                    <button className="btn bg-[#9538E2] text-white my-2">Add to Cart</button>
+                                    <button onClick={() => addToCart(item)} className="btn bg-[#9538E2] text-white my-2">Add to Cart</button>
                                 </div>
                             </div>
                             <div>
