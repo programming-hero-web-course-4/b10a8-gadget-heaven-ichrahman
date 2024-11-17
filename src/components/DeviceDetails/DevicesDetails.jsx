@@ -2,6 +2,9 @@ import { useContext, useState } from "react";
 import { FaRegHeart } from "react-icons/fa6";
 import { Link, useLoaderData, useParams } from "react-router-dom";
 import { GadgetContext } from "../Root/Root";
+import { ToastContainer, toast } from 'react-toastify';
+
+import 'react-toastify/dist/ReactToastify.css';
 
 const DevicesDetails = () => {
     const { deviceId } = useParams();
@@ -19,9 +22,9 @@ const DevicesDetails = () => {
 
         if (!isAlreadyInCart) {
             setCart([...cart, item]);
-            alert(`${item.product_title} added to cart!`);
+            toast.success(`${item.product_title} added to cart!`);
         } else {
-            alert(`${item.product_title} is already in the cart.`);
+            toast.success(`${item.product_title} added to cart!`);
         }
     }
 
@@ -30,15 +33,28 @@ const DevicesDetails = () => {
 
         if (!isAlreadyInWishList) {
             setWishList([...wishlist, item]);
-            alert(`${item.product_title} added to wishlist`);
+            toast.success(`${item.product_title} added to wishlist!`);
         } else {
-            alert(`${item.product_title} is already in the wishlist`);
+            toast.info(`${item.product_title} is already in the wishlist.`);
         }
     }
 
     return (
 
         <div>
+            <ToastContainer
+                position="top-right"
+                autoClose={3000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                theme="colored"
+            />
+
             <div className="bg-purple-600 text-center py-8">
                 <div>
                     <h3 className="text-white text-[32px] font-bold"> Details</h3>
