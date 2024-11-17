@@ -1,9 +1,13 @@
 import { useContext, useState } from "react";
 import { GadgetContext } from "../Root/Root";
+import { useNavigate } from "react-router-dom";
 
 const Cart = () => {
     const { cart, setCart } = useContext(GadgetContext);
     const [sortedCart, setSortedCart] = useState([...cart]);
+    const [showModal, setShowModal] = useState(false);
+    const navigate = useNavigate();
+
     // console.log(cart);
 
     const totalCost = cart?.reduce((total, item) => total + item.price, 0);
@@ -19,6 +23,17 @@ const Cart = () => {
         setSortedCart(sorted);
     }
 
+    const handlePurchase = () => {
+        setShowModal(true);
+        setCart([]);
+        setSortedCart([]);
+    };
+
+    const closeModal = () => {
+        setShowModal(false);
+        navigate("/");
+    };
+
     return (
         <div>
             <div className="flex items-center justify-between">
@@ -26,7 +41,10 @@ const Cart = () => {
                 <div className="flex items-center gap-4">
                     <h2 className="font-bold">Total cost: {totalCost.toFixed(2)}</h2>
                     <button onClick={sortByPrice} class="btn btn-outline btn-primary">Sort by Price</button>
-                    <button className="btn text-white btn-primary">Purchase</button>
+                    <button
+                        onClick={handlePurchase}
+                        disabled={cart.length === 0 || totalCost === 0}
+                        className="btn text-white btn-primary">Purchase</button>
                 </div>
             </div>
             <div>
@@ -63,6 +81,20 @@ const Cart = () => {
                     <p className="text-gray-500">Your cart is empty.</p>
                 )}
             </div>
+            {showModal && (
+                <div className="fixed inset-0 flex items-center justify-center bg-gray-800 bg-opacity-50">
+                    <div className="bg-white p-6 rounded-lg shadow-lg">
+                        <h2 className="text-xl font-bold mb-4">🎉 Congratulations!</h2>
+                        <p className="mb-6">Thank you for your purchase! Your cart is now empty.</p>
+                        <button
+                            onClick={closeModal}
+                            className="btn btn-primary text-white"
+                        >
+                            Close
+                        </button>
+                    </div>
+                </div>
+            )}
         </div>
     );
 };
