@@ -2,7 +2,7 @@
     {
         "product_id": 1,
         "product_title": "Smart Watch Pro",
-        "product_image": "smartwatch.jpg",
+        "product_image": "https://cmf.tech/cdn/shop/files/orange_fa78d040-fd3c-42ac-ae2b-5074d41710fc_1200x.png?v=1695698366",
         "category": "Wearables",
         "price": 120,
         "description": "Feature-rich smart watch with health tracking and notifications.",
@@ -17,7 +17,7 @@
     {
         "product_id": 2,
         "product_title": "Fitness Tracker X",
-        "product_image": "fitnesstracker.jpg",
+        "product_image": "https://m.media-amazon.com/images/I/61chIqkwPDL.jpg",
         "category": "Wearables",
         "price": 80,
         "description": "Track your daily activity and sleep with this lightweight tracker.",
@@ -32,7 +32,7 @@
     {
         "product_id": 3,
         "product_title": "VR Headset Pro",
-        "product_image": "vrheadset.jpg",
+        "product_image": "https://www.caseking.de/dw/image/v2/BKRR_PRD/on/demandware.static/-/Sites-master-catalog-caseking/default/dwe10a8eda/images/pim/GAVR/GAVR-098/GAVR-098_98ce2ebfb84c5d335412ba99747ddeded35fef8b.jpg?sw=731",
         "category": "Wearables",
         "price": 250,
         "description": "Immersive VR headset for gaming and virtual experiences.",
@@ -47,7 +47,7 @@
     {
         "product_id": 4,
         "product_title": "Wireless Earbuds Plus",
-        "product_image": "earbuds.jpg",
+        "product_image": "https://www.vive.com/media/filer_public/vive/accessories/acc/earbuds_plus/detail-earbuds-plus-white.png",
         "category": "Wearables",
         "price": 70,
         "description": "Comfortable and high-quality wireless sound.",
@@ -62,7 +62,7 @@
     {
         "product_id": 5,
         "product_title": "Smart Glasses 2.0",
-        "product_image": "smartglasses.jpg",
+        "product_image": "https://i.pcmag.com/imagery/roundups/06JbOb5326HQb5bU3nxwcvF-5.fit_lim.size_1200x630.v1702481835.jpg",
         "category": "Wearables",
         "price": 200,
         "description": "Augmented reality glasses with voice assistant integration.",
@@ -77,7 +77,7 @@
     {
         "product_id": 6,
         "product_title": "Smart Ring",
-        "product_image": "smartring.jpg",
+        "product_image": "https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MP_143187206?x=536&y=402&format=jpg&quality=80&sp=yes&strip=yes&trim&ex=536&ey=402&align=center&resizesource&unsharp=1.5x1+0.7+0.02&cox=0&coy=0&cdx=536&cdy=402",
         "category": "Wearables",
         "price": 95,
         "description": "Stylish smart ring with fitness tracking and notifications.",
@@ -92,7 +92,7 @@
     {
         "product_id": 7,
         "product_title": "Gaming Laptop Xtreme",
-        "product_image": "gaminglaptop.jpg",
+        "product_image": "https://m.media-amazon.com/images/I/81w3U9YrJwL.jpg",
         "category": "Computers",
         "price": 1500,
         "description": "High-performance laptop for gaming and productivity.",
@@ -107,7 +107,7 @@
     {
         "product_id": 8,
         "product_title": "Wireless Keyboard",
-        "product_image": "keyboard.jpg",
+        "product_image": "https://zebronics.com/cdn/shop/products/ZEB-K5000MW-pic1.jpg?v=1648026336&width=2048",
         "category": "Computers",
         "price": 60,
         "description": "Sleek and responsive wireless keyboard for home or office.",
@@ -122,7 +122,7 @@
     {
         "product_id": 9,
         "product_title": "4K Drone Max",
-        "product_image": "drone.jpg",
+        "product_image": "https://m.media-amazon.com/images/I/61E5WIS9vDL.jpg",
         "category": "Drones",
         "price": 300,
         "description": "Capture stunning 4K aerial footage with this easy-to-fly drone.",
@@ -137,7 +137,7 @@
     {
         "product_id": 10,
         "product_title": "Mini Camera Drone",
-        "product_image": "minidrone.jpg",
+        "product_image": "https://store.dji.bg/4690-thickbox_default/dji-mini-3-pro-dji-rc-camera-drone.jpg",
         "category": "Drones",
         "price": 120,
         "description": "Portable mini drone with camera for casual use.",
