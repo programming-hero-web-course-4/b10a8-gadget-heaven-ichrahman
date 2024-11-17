@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 
 const Devices = () => {
-    const [data] = useContext(GadgetContext);
+    const { data } = useContext(GadgetContext);
     // console.log(data)
 
     const [activeCategory, setActiveCategory] = useState("All Products");

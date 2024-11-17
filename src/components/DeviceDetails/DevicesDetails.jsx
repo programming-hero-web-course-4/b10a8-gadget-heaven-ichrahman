@@ -1,15 +1,24 @@
+import { useContext } from "react";
 import { FaRegHeart } from "react-icons/fa6";
 import { Link, useLoaderData, useParams } from "react-router-dom";
+import { GadgetContext } from "../Root/Root";
 
 const DevicesDetails = () => {
     const { deviceId } = useParams();
     const data = useLoaderData();
-    console.log(data)
-    console.log(deviceId)
+    // console.log(data)
+    // console.log(deviceId)
 
     const id = parseInt(deviceId);
     const device = data?.find(device => device.product_id === id);
-    console.log(device)
+    // console.log(device)
+
+    const { cart, setCart } = useContext(GadgetContext);
+    const addToCart = (item) => {
+        setCart([...cart, item]);
+        alert(`${item.product_title} added to cart!`);
+        console.log(cart);
+    }
 
     return (
 
@@ -60,7 +69,7 @@ const DevicesDetails = () => {
                         </div>
 
                         <div className="card-actions justify-start flex items-center">
-                            <button className="btn bg-[#9538E2] text-white">Add to Cart</button>
+                            <button onClick={() => addToCart(device)} className="btn bg-[#9538E2] text-white">Add to Cart</button>
                             <Link className="pr-2">
                                 <div className="bg-white rounded-full p-4 flex items-center justify-center hover:bg-gray-200 transition duration-200">
                                     <FaRegHeart className="text-black" />

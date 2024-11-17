@@ -11,6 +11,8 @@ import Home from './components/Home/Home.jsx';
 import Dashboard from './components/Dashboard/Dashboard.jsx';
 import Statistics from './components/Statistics/Statistics.jsx';
 import DevicesDetails from './components/DeviceDetails/DevicesDetails.jsx';
+import Cart from './components/Cart/Cart.jsx';
+import Wishlist from './components/Wishlist/Wishlist.jsx';
 
 
 const router = createBrowserRouter([
@@ -35,6 +37,14 @@ const router = createBrowserRouter([
       {
         path: 'statistics',
         element: <Statistics />
+      },
+      {
+        path: 'cart',
+        element: <Cart />
+      },
+      {
+        path: 'wishlist',
+        element: <Wishlist />
       }
     ]
   },
