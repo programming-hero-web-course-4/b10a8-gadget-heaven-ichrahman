@@ -10,6 +10,7 @@ import Root from './components/Root/Root.jsx';
 import Home from './components/Home/Home.jsx';
 import Dashboard from './components/Dashboard/Dashboard.jsx';
 import Statistics from './components/Statistics/Statistics.jsx';
+import DevicesDetails from './components/DeviceDetails/DevicesDetails.jsx';
 
 
 const router = createBrowserRouter([
@@ -25,6 +26,11 @@ const router = createBrowserRouter([
       {
         path: 'dashboard',
         element: <Dashboard />
+      },
+      {
+        path: 'devices/:deviceId',
+        element: <DevicesDetails />,
+        loader: () => fetch('/data.json')
       },
       {
         path: 'statistics',
