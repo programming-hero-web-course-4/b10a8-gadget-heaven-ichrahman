@@ -9,6 +9,7 @@ export const GadgetContext = createContext();
 const Root = () => {
     const [data, setData] = useState([]);
     const [cart, setCart] = useState([]);
+    const [wishlist, setWishList] = useState([]);
 
     useEffect(() => {
         fetch('./data.json')
@@ -18,7 +19,7 @@ const Root = () => {
 
     return (
         <div className="bg-[#F6F6F6]">
-            <GadgetContext.Provider value={{ data, cart, setCart }}>
+            <GadgetContext.Provider value={{ data, cart, setCart, wishlist, setWishList }}>
                 <div className="max-w-screen-xl mx-auto px-4">
                     <Navbar />
                     <Outlet />
