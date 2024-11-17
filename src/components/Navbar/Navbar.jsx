@@ -1,11 +1,28 @@
 import { Link, useLocation } from "react-router-dom";
 import { FaRegHeart } from "react-icons/fa6";
 import { MdOutlineShoppingCart } from "react-icons/md";
+import { Helmet } from "react-helmet";
 
 const Navbar = () => {
     const location = useLocation();
 
     const isHomePage = location.pathname === '/' || location.pathname === '/home';
+
+    const getTitle = () => {
+        switch (location.pathname) {
+            case '/':
+            case '/home':
+                return 'Home - Gadget Heaven';
+            case '/statistics':
+                return 'Statistics - Gadget Heaven';
+            case '/dashboard':
+                return 'Dashboard - Gadget Heaven';
+            case '/login':
+                return 'Login - Gadget Heaven';
+            default:
+                return 'Gadget Heaven';
+        }
+    };
 
 
     const links = <>
@@ -20,6 +37,9 @@ const Navbar = () => {
 
     return (
         <>
+            <Helmet>
+                <title>{getTitle()}</title>
+            </Helmet>
             <div className={`navbar ${isHomePage ? 'bg-purple-600 text-white' : 'bg-white text-black'}`}>
                 <div className="navbar-start">
                     <div className="dropdown">
