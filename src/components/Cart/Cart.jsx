@@ -1,15 +1,22 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { GadgetContext } from "../Root/Root";
 
 const Cart = () => {
     const { cart, setCart } = useContext(GadgetContext);
-    console.log(cart);
+    const [sortedCart, setSortedCart] = useState([...cart]);
+    // console.log(cart);
 
     const totalCost = cart?.reduce((total, item) => total + item.price, 0);
 
     const handleDelete = itemToRemove => {
         const updatedCart = cart.filter(item => item.product_id !== itemToRemove.product_id);
         setCart(updatedCart);
+        setSortedCart(updatedCart)
+    }
+
+    const sortByPrice = () => {
+        const sorted = [...sortedCart].sort((a, b) => b.price - a.price);
+        setSortedCart(sorted);
     }
 
     return (
@@ -18,13 +25,13 @@ const Cart = () => {
                 <h2 className="text-[24px] font-bold">Cart</h2>
                 <div className="flex items-center gap-4">
                     <h2 className="font-bold">Total cost: {totalCost.toFixed(2)}</h2>
-                    <button class="btn btn-outline btn-primary">Sort by Price</button>
+                    <button onClick={sortByPrice} class="btn btn-outline btn-primary">Sort by Price</button>
                     <button className="btn text-white btn-primary">Purchase</button>
                 </div>
             </div>
             <div>
-                {cart.length > 0 ? (
-                    cart.map((item) => (
+                {sortedCart.length > 0 ? (
+                    sortedCart.map((item) => (
                         <div key={item.product_id} className="flex items-center justify-between p-4 border-b">
                             <div className="flex items-center gap-7">
                                 <img src={item.product_image} alt={item.product_title} className="w-16 h-16 object-cover" />
