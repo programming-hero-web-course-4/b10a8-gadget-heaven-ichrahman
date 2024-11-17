@@ -15,12 +15,14 @@ import Cart from './components/Cart/Cart.jsx';
 import Wishlist from './components/Wishlist/Wishlist.jsx';
 import Login from './components/Login/Login.jsx';
 import SignUp from './components/SignUp/SignUp.jsx';
+import ErrorPage from './components/ErrorPage/ErrorPage.jsx';
 
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root />,
+    errorElement: <ErrorPage />,
     // todo: error page
     children: [
       {
