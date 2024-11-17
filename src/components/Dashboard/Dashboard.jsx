@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import Cart from "../Cart/Cart";
 import { useState } from "react";
 import Wishlist from "../Wishlist/Wishlist";

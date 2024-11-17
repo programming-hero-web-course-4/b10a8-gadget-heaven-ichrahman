@@ -15,9 +15,14 @@ const DevicesDetails = () => {
 
     const { cart, setCart } = useContext(GadgetContext);
     const addToCart = (item) => {
-        setCart([...cart, item]);
-        alert(`${item.product_title} added to cart!`);
-        console.log(cart);
+        const isAlreadyInCart = cart.find(cartItem => cartItem.product_id === item.product_id);
+
+        if (!isAlreadyInCart) {
+            setCart([...cart, item]);
+            alert(`${item.product_title} added to cart!`);
+        } else {
+            alert(`${item.product_title} is already in the cart.`);
+        }
     }
 
     return (
