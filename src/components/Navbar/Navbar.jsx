@@ -12,6 +12,9 @@ const Navbar = () => {
         <li><Link className="hover:text-[#9538E2] hover:bg-white rounded" to="/">Home</Link></li>
         <li className="hover:text-[#9538E2] hover:bg-white rounded"><Link to="/statistics">Statistics</Link></li>
         <li className="hover:text-[#9538E2] hover:bg-white rounded"><Link to="/dashboard">Dashboard</Link></li>
+        <li className="hover:text-[#9538E2] hover:bg-white rounded">
+            <Link to="/login">Login</Link>
+        </li>
     </>
 
 
