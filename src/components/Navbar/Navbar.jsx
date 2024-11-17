@@ -2,27 +2,38 @@ import { Link, useLocation } from "react-router-dom";
 import { FaRegHeart } from "react-icons/fa6";
 import { MdOutlineShoppingCart } from "react-icons/md";
 import { Helmet } from "react-helmet";
+import { useEffect, useState } from "react";
 
 const Navbar = () => {
     const location = useLocation();
+    const [pageTitle, setPageTitle] = useState("Gadget Heaven");
 
     const isHomePage = location.pathname === '/' || location.pathname === '/home';
 
-    const getTitle = () => {
+    const fetchPageTitle = async () => {
         switch (location.pathname) {
-            case '/':
-            case '/home':
-                return 'Home - Gadget Heaven';
-            case '/statistics':
-                return 'Statistics - Gadget Heaven';
-            case '/dashboard':
-                return 'Dashboard - Gadget Heaven';
-            case '/login':
-                return 'Login - Gadget Heaven';
+            case "/":
+            case "/home":
+                return "Home - Gadget Heaven";
+            case "/statistics":
+                return "Statistics - Gadget Heaven";
+            case "/dashboard":
+                return "Dashboard - Gadget Heaven";
+            case "/login":
+                return "Login - Gadget Heaven";
             default:
-                return 'Gadget Heaven';
+                return "Gadget Heaven";
         }
     };
+
+    useEffect(() => {
+        const getTitle = async () => {
+            const title = await fetchPageTitle();
+            setPageTitle(title);
+        };
+
+        getTitle();
+    }, [location.pathname])
 
 
     const links = <>
@@ -38,7 +49,7 @@ const Navbar = () => {
     return (
         <>
             <Helmet>
-                <title>{getTitle()}</title>
+                <title>{pageTitle}</title>
             </Helmet>
             <div className={`navbar ${isHomePage ? 'bg-purple-600 text-white' : 'bg-white text-black'}`}>
                 <div className="navbar-start">
